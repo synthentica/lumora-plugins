@@ -7,6 +7,7 @@
   "homepage": "https://lumora.video/docs/agents",
   "repository": "https://github.com/synthentica/lumora-plugins",
   "license": "MIT",
+  "privacyPolicyUrl": "https://lumora.video/privacy",
   "keywords": ["video", "demo-video", "product-video", "launch", "screen-recording", "marketing"],
   "icon": "./assets/icon.png",
   "mcpServers": {
