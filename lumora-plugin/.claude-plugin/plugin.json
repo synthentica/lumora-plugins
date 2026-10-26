@@ -1,0 +1,15 @@
+{
+  "name": "lumora",
+  "displayName": "Lumora Video",
+  "version": "1.0.0",
+  "description": "Turn screen recordings, screenshots or a website into cinematic product demo videos: 3D camera moves, callouts, captions, a title card and music. Connects to Lumora's hosted MCP server and adds a skill that directs a good demo.",
+  "author": { "name": "Lumora", "email": "support@lumora.video", "url": "https://lumora.video" },
+  "homepage": "https://lumora.video/docs/agents",
+  "repository": "https://github.com/synthentica/lumora-plugins",
+  "license": "MIT",
+  "keywords": ["video", "demo-video", "product-video", "launch", "screen-recording", "marketing"],
+  "icon": "./assets/icon.png",
+  "mcpServers": {
+    "lumora": { "type": "http", "url": "https://lumora.video/mcp" }
+  }
+}

@@ -1,0 +1,5 @@
+# build outputs and the local Claude Desktop extension (built from the Lumora app repo)
+*.zip
+*.mcpb
+mcpb/
+.DS_Store

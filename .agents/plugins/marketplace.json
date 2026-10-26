@@ -1,0 +1,12 @@
+{
+  "name": "lumora",
+  "interface": { "displayName": "Lumora Video" },
+  "plugins": [
+    {
+      "name": "lumora",
+      "source": { "source": "local", "path": "./lumora-plugin" },
+      "policy": { "installation": "AVAILABLE", "authentication": "ON_INSTALL" },
+      "category": "Productivity"
+    }
+  ]
+}

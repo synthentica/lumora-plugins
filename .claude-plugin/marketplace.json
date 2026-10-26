@@ -1,0 +1,14 @@
+{
+  "name": "lumora",
+  "owner": { "name": "Lumora", "email": "support@lumora.video" },
+  "description": "Lumora plugins: cinematic product demo videos from your assistant",
+  "plugins": [
+    {
+      "name": "lumora",
+      "source": "./lumora-plugin",
+      "description": "Turn screen recordings, screenshots or a website into cinematic product demo videos.",
+      "category": "media",
+      "tags": ["video", "demo", "marketing"]
+    }
+  ]
+}
