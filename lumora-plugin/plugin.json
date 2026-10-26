@@ -3,11 +3,22 @@
   "name": "lumora",
   "version": "1.0.0",
   "description": "Turn screen recordings, screenshots or a website into cinematic product demo videos.",
-  "author": { "name": "Lumora", "email": "support@lumora.video", "url": "https://lumora.video" },
+  "author": {
+    "name": "Lumora",
+    "email": "support@lumora.video",
+    "url": "https://lumora.video"
+  },
   "homepage": "https://lumora.video/docs/agents",
   "repository": "https://github.com/synthentica/lumora-plugins",
   "license": "MIT",
-  "keywords": ["video", "demo-video", "product-video", "launch", "screen-recording", "marketing"],
+  "keywords": [
+    "video",
+    "demo-video",
+    "product-video",
+    "launch",
+    "screen-recording",
+    "marketing"
+  ],
   "extensions": {
     "com.openai": {
       "interface": {
@@ -16,7 +27,10 @@
         "longDescription": "Lumora turns a screen recording, a screenshot or a public website into a short product demo video: a 3D camera move over your interface, callouts that point at features, captions, a device frame, a title card, music and a call to action. Ask for a launch video, a changelog clip or a vertical social video of the app you are building. Preview frames before exporting, then get an MP4, GIF or WebM with a share link. Lumora edits your own footage with motion graphics; it does not generate imagery with an AI model.",
         "developerName": "Lumora",
         "category": "Creativity",
-        "capabilities": ["Read", "Write"],
+        "capabilities": [
+          "Read",
+          "Write"
+        ],
         "websiteURL": "https://lumora.video",
         "supportURL": "https://lumora.video/support",
         "privacyPolicyURL": "https://lumora.video/privacy",
@@ -29,6 +43,60 @@
         "brandColor": "#FF4D2E",
         "composerIcon": "./assets/icon.png",
         "logo": "./assets/logo.png"
+      },
+      "review": {
+        "test_cases": {
+          "positive": [
+            {
+              "description": "Launch video from a website",
+              "prompt": "Make a 15 second launch video of https://lumora.video with Lumora, in a clean light style with a call to action at the end.",
+              "tools_triggered": "list_styles, create_video, preview_frame",
+              "expected_behavior": "Lumora screenshots the page, creates a project with a title card, callouts and the call to action, returns an editor link and shows a preview frame. Nothing is exported yet."
+            },
+            {
+              "description": "Feature video from a screenshot",
+              "prompt": "Turn this dashboard screenshot into a 10 second vertical feature video with Lumora, with two short callouts on the main numbers.",
+              "tools_triggered": "upload_media, create_video, preview_frame",
+              "expected_behavior": "The screenshot is uploaded, a vertical (9:16) project is created with two callouts placed on the dashboard, and a preview frame is shown with an editor link.",
+              "file_attachment_urls": [
+                "https://lumora.video/sample/dashboard.png"
+              ]
+            },
+            {
+              "description": "Find an existing video",
+              "prompt": "List my Lumora videos and show me the details of Spring launch.",
+              "tools_triggered": "list_videos, get_video",
+              "expected_behavior": "Lists the account's projects (including Spring launch) and summarises Spring launch: length, format, title, tagline, callouts and camera."
+            },
+            {
+              "description": "Edit and export",
+              "prompt": "In my Lumora video Spring launch, change the tagline to \"Product demos in minutes\", slow the camera down, then export it as an MP4.",
+              "tools_triggered": "update_video, render_video, render_status",
+              "expected_behavior": "Updates the project, starts the export and checks its progress until it finishes (2 to 4 minutes), then returns the MP4 download link and a public share link."
+            },
+            {
+              "description": "Brand kit",
+              "prompt": "Save a Lumora brand kit called Review with the colours #6D5DFC, #A78BFA and #111111, then use it for a new video of https://lumora.video.",
+              "tools_triggered": "save_brand_kit, create_video",
+              "expected_behavior": "Saves the brand kit for the team and creates a new project that uses its colours, returning the editor link."
+            }
+          ],
+          "negative": [
+            {
+              "description": "AI-generated footage is out of scope: Lumora only animates media the user provides, so the assistant should explain that and offer a demo video from a screenshot, recording or website instead of calling create_video with invented footage.",
+              "prompt": "Generate a realistic AI video of a person presenting my product on stage."
+            },
+            {
+              "description": "Unrelated writing task: no Lumora tool should be called, the assistant just writes the text itself.",
+              "prompt": "Write a 300 word blog post announcing our spring product launch."
+            },
+            {
+              "description": "Bulk deletion is not something the plugin offers: there is no delete tool, so the assistant should not change any project and should point the user to deleting videos in the Lumora app.",
+              "prompt": "Delete all of my Lumora videos."
+            }
+          ]
+        },
+        "commerce": false
       }
     }
   }
