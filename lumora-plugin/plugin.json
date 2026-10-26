@@ -13,9 +13,9 @@
       "interface": {
         "displayName": "Lumora Video",
         "shortDescription": "Cinematic product demo videos",
-        "longDescription": "Lumora turns a screen recording, a screenshot or a public website into a short product demo video: a 3D camera move over your interface, callouts that point at features, captions, a device frame, a title card, music and a call to action. Ask for a launch video, a changelog clip or a vertical social video of the app you are building. Preview frames before exporting, then get an MP4, GIF or WebM with a share link. Lumora edits your own footage with motion graphics; it does not generate imagery with an AI model. A free Lumora account includes three exports a month.",
+        "longDescription": "Lumora turns a screen recording, a screenshot or a public website into a short product demo video: a 3D camera move over your interface, callouts that point at features, captions, a device frame, a title card, music and a call to action. Ask for a launch video, a changelog clip or a vertical social video of the app you are building. Preview frames before exporting, then get an MP4, GIF or WebM with a share link. Lumora edits your own footage with motion graphics; it does not generate imagery with an AI model.",
         "developerName": "Lumora",
-        "category": "Productivity",
+        "category": "Design",
         "capabilities": ["Read", "Write"],
         "websiteURL": "https://lumora.video",
         "supportURL": "https://lumora.video/support",
