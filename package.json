@@ -3,8 +3,10 @@
   "version": "1.0.0",
   "description": "OpenCode plugin for Lumora: turn screen recordings, screenshots or a website into cinematic product demo videos.",
   "type": "module",
+  "main": "./opencode/index.js",
   "exports": {
-    ".": "./opencode/index.js"
+    ".": "./opencode/index.js",
+    "./server": "./opencode/index.js"
   },
   "files": [
     "opencode",
