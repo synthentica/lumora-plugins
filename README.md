@@ -24,10 +24,10 @@ codex plugin add lumora@lumora
 **OpenCode**
 
 ```
-opencode plugin add opencode-lumora
+opencode plugin add github:synthentica/lumora-plugins
 ```
 
-or straight from GitHub: `opencode plugin add github:synthentica/lumora-plugins`. Then run `opencode mcp auth lumora` to sign in. On OpenCode 1.x, add `"plugin": ["opencode-lumora"]` to `opencode.json` instead. The OpenCode plugin lives in [`opencode/`](opencode/) and loads the same skill and hosted MCP server as the Claude and Codex plugin.
+Then run `opencode mcp auth lumora` to sign in. On OpenCode 1.x, add `"plugin": ["github:synthentica/lumora-plugins"]` to `opencode.json` instead. The OpenCode plugin lives in [`opencode/`](opencode/) and loads the same skill and hosted MCP server as the Claude and Codex plugin.
 
 **Claude, ChatGPT and other MCP clients:** add a custom connector with the address `https://lumora.video/mcp` and sign in when asked.
 
