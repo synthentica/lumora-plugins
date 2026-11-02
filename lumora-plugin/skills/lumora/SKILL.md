@@ -138,6 +138,12 @@ taskbar; the window opens out of the dock), `stack` (two more copies: phones fan
 windows cascade) and `handheld` (slight camera shake). A callout can carry `keys`, such as
 `"⌘ K"`, to show a keyboard shortcut as keycaps; ⌘ becomes Ctrl on Windows and Android.
 
+`backdrop` sets what sits behind the screen: a wallpaper name from `list_styles` →
+`backdrops`, an uploaded image url, or one of the animated liquid backdrops drawn in the
+palette's colours: `Liquid` (marbled flow), `Lava` (glossy blobs), `Mesh` (soft mesh
+gradient), `Chrome` (liquid metal), `Borealis` (northern lights) and `Silk` (waving ribbons).
+They suit looks that leave room around the screen, such as Studio, Keynote or Launch day.
+
 Detail touches: `press` (the element under each callout lifts, presses down and springs
 back like a real button; give callouts `w`/`h`), `loupe` (a magnifier enlarges the element)
 and `confetti` (a burst over the end card, for launches). Phones and laptops are drawn as 3D
